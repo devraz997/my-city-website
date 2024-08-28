@@ -6,11 +6,11 @@ const FoodPlaces = () => {
 
     // Dummy data for food places in Mahabubnagar
     const foodPlaces = [
-        { name: 'Momo Hut', tagline: 'Popular for its delicious momos and snacks.', image: 'https://via.placeholder.com/300x200?text=Momo+Hut' },
-        { name: 'Spice Junction', tagline: 'Known for its spicy Indian curries and traditional dishes.', image: 'https://via.placeholder.com/300x200?text=Spice+Junction' },
-        { name: 'Sweet Tooth Cafe', tagline: 'Famous for its range of mouth-watering desserts.', image: 'https://via.placeholder.com/300x200?text=Sweet+Tooth+Cafe' },
-        { name: 'Tandoori Treats', tagline: 'Offers a variety of tandoori and grilled dishes.', image: 'https://via.placeholder.com/300x200?text=Tandoori+Treats' },
-        { name: 'The Royal Diner', tagline: 'Offers a fine dining experience with an extensive menu.', image: 'https://via.placeholder.com/300x200?text=The+Royal+Diner' }
+        { name: 'UB Food Court', tagline: 'Popular go to spot for food, chai, chill.', image: 'ubfoodcourt.png' },
+        { name: 'zeeshan Restaurant', tagline: 'Known for authentic Hyderabadi cuisine', image: 'Zeeshan.png' },
+        { name: 'Hotel Nayab', tagline: 'Indian dishes with a focus on North Indian and Mughlai cuisine', image: 'https://via.placeholder.com/300x200?text=Hotel+Nayab' },
+        { name: 'Shilpi Hotel', tagline: 'Offers a multi-cuisine offerings, providing a mix of traditional and contemporary dishes.', image: 'https://via.placeholder.com/300x200?text=Shilpi+Hotel' },
+        { name: 'Himalaya Restaurant', tagline: 'One of very first favourite for Biryani and North Indian dishes', image: 'Himalaya.png' }
     ];
 
     useEffect(() => {

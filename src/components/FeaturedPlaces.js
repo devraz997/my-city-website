@@ -5,33 +5,34 @@ import './FeaturedPlaces.css';
 const places = [
     {
         id: 1,
-        name: "City Park",
+        name: "Mayuri Park",
         description: "A beautiful park with lots of greenery.",
-        image: "https://via.placeholder.com/800x500?text=City+Park"
+        //image: "https://via.placeholder.com/800x500?text=City+Park"
+        image: "Mayuripark.png"
     },
     {
         id: 2,
-        name: "Historic Temple",
-        description: "An ancient temple with rich history.",
-        image: "https://via.placeholder.com/800x500?text=Historic+Temple"
+        name: "Pillalamarri",
+        description: "700 years old Pillalamarri great Banyan Tree.",
+        image: "pillamarriai.jpg"
     },
     {
         id: 3,
-        name: "Modern Shopping Mall",
-        description: "A shopping mall with various brands.",
-        image: "https://via.placeholder.com/800x500?text=Shopping+Mall"
+        name: "Koil Sagar",
+        description: "An irrigation project.",
+        image: "Koilsagar.png"
     },
     {
         id: 4,
-        name: "Cultural Center",
-        description: "A hub for cultural events and activities.",
-        image: "https://via.placeholder.com/800x500?text=Cultural+Center"
+        name: "Koilkonda Fort",
+        description: "The erstwhile outpost of the Qutab Shahi dynasty, perched on a hilltop.",
+        image: "koilkondafort.png"
     },
     {
         id: 5,
-        name: "Local Market",
-        description: "A vibrant market with local products.",
-        image: "https://via.placeholder.com/800x500?text=Local+Market"
+        name: "Mini Tankbund (Talab katta)",
+        description: "A beautiful lake with suspension bridge located in heart of Mahabubnagar.",
+        image: "minitankbund.png"
     }
 ];
 

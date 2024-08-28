@@ -17,27 +17,28 @@ const sliderSettings = {
 
 const slides = [
   {
-    image: 'https://via.placeholder.com/1200x600?text=Update+1', // Placeholder image
-    text: 'Exciting developments are happening in Mahabubnagar with new infrastructure projects underway!',
+    //image: 'https://via.placeholder.com/1200x600?text=Update+1', // Placeholder image
+    image: 'MbnrarealpicAI.png',
+    text: 'Mahabubnagar is the largest district in Telangana by area, covering 5,285.1 sq. km!',
   },
   {
-    image: 'https://via.placeholder.com/1200x600?text=Update+2',
-    text: 'Mahabubnagar’s local businesses are thriving with new opportunities and innovations.',
+    image: 'mirmahabubali.png',
+    text: 'The district headquarters was named after Mir Mahabub Ali Khan, the Nizam of Hyderabad',
   },
   {
-    image: 'https://via.placeholder.com/1200x600?text=Update+3',
-    text: 'Recent cultural events in Mahabubnagar have brought the community closer together.',
+    image: 'oldmbnr.png',
+    text: 'Mahabubnagar was formerly known as "Rukmammapeta" and "Palamooru.',
   },
   {
-    image: 'https://via.placeholder.com/1200x600?text=Update+4',
-    text: 'Mahabubnagar’s educational sector sees significant growth with new schools and colleges.',
+    image: 'mbnrcuisine.png',
+    text: "Mahabubnagar's cuisine is a blend of traditional Telugu flavors with Persian, Mughal, and local Deccan influences.",
   },
 ];
 
 const LatestUpdates = () => {
   return (
     <section className="latest-updates">
-      <div className="latest-updates-title">Latest Updates</div>
+      <div className="latest-updates-title">Popular Facts</div>
       <Slider {...sliderSettings}>
         {slides.map((slide, index) => (
           <div key={index} className="slider-item">
