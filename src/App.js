@@ -1,19 +1,34 @@
-// src/App.js
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { auth, onAuthStateChanged, signOut } from "./firebase";
+import Header from './components/Header';
+import Footer from './components/Footer';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
+import Hero from './components/Hero';
+import LatestUpdates from './components/LatestUpdates';
+import PopularPolls from './components/PopularPolls';
+import FeaturedPlaces from './components/FeaturedPlaces';
+import FoodPlaces from './components/FoodPlaces';
+import CallToAction from './components/CallToAction';
+
+import './App.css';
 
 function App() {
   const [user, setUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Listen for authentication state changes
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
 
-    // Cleanup subscription on unmount
+    // Simulate loading time (can be removed or adjusted)
+    setTimeout(() => {
+      setIsLoading(false);
+      document.body.classList.add('loaded'); // Add class to body to trigger loader fade-out
+    }, 1500); // Adjust time as needed
+
     return () => unsubscribe();
   }, []);
 
@@ -24,23 +39,46 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Mahabubnagarbolte, coming soon!</h1>
-      {user ? (
-        <div>
-          <p>Welcome, {user.email}!</p>
-          <button onClick={handleSignOut}>Sign Out</button>
-          {/* Place components that require authentication here */}
-          <p>Interactive content like polls, discussions, etc.</p>
-        </div>
-      ) : (
-        <div>
-          <SignUp />
-          <SignIn setUser={setUser} />
-          <p>You need to sign in to participate in polls and discussions.</p>
+    <Router>
+      {/* Loader element */}
+      {isLoading && (
+        <div id="loader">
+          <img src="/mahabubnagarbolteinstadp.png" alt="Loading..." />
         </div>
       )}
-    </div>
+
+      {!isLoading && (
+        <>
+          <Header />
+          <div className="app-container">
+            <Routes>
+              <Route path="/" element={
+                <>
+                  <Hero />
+                  <LatestUpdates />
+                  <PopularPolls user={user} />
+                  <FeaturedPlaces />
+                  <FoodPlaces />
+                  <CallToAction user={user} />
+                </>
+              } />
+              <Route path="/sign-up" element={user ? <Navigate to="/" /> : <SignUp />} />
+              <Route path="/sign-in" element={user ? <Navigate to="/" /> : <SignIn setUser={setUser} />} />
+              {/* Add other routes here */}
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </div>
+          <Footer />
+          <div className="auth-prompt">
+            {!user ? (
+              <p className="auth-prompt-text">You need to sign in to interact with certain features like polls.</p>
+            ) : (
+              <button onClick={handleSignOut}>Sign Out</button>
+            )}
+          </div>
+        </>
+      )}
+    </Router>
   );
 }
 

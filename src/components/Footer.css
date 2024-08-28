@@ -1,0 +1,79 @@
+/* Footer Styling */
+footer {
+  padding: 20px;
+  margin: 10px;
+  background-color: #0a3562; /* Dark Blue for footer background */
+  color: #fff; /* White text color */
+  border-radius: 10px;
+  text-align: center; /* Center align text */
+}
+
+/* Logo Styling */
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: linear-gradient(150deg, #FFF1B9, #d9534f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navigation Styling */
+nav {
+  display: flex;
+  justify-content: center; /* Center align navigation links */
+  flex-wrap: wrap; /* Ensure links wrap on smaller screens */
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1rem; /* Adjust font size as needed */
+}
+
+/* Social Media Links */
+.social-media {
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  color: #fff;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem; /* Adjust font size for social media links */
+}
+
+/* Footer Text */
+.footer-copyright {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  footer {
+    padding: 1rem 0.5rem; /* Adjust padding on mobile */
+  }
+
+  nav {
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: center; /* Center navigation links horizontally */
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    margin: 0.5rem 0; /* Add space between navigation links vertically */
+  }
+
+  .social-media {
+    flex-direction: column; /* Stack social media links vertically */
+    align-items: center; /* Center social media links horizontally */
+    margin-bottom: 10px;
+  }
+
+  .social-media a {
+    margin: 0 0.5rem; /* Add space between social media links vertically */
+  }
+}

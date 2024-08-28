@@ -1,0 +1,138 @@
+/* LatestUpdates.css */
+.latest-updates {
+  position: relative;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* Title for Latest Updates */
+.latest-updates-title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(249, 34, 34, 0.171);
+  border-radius: 8px;
+  padding: 10px 20px;
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  font-size: 1rem;
+  font-weight: bold;
+  color: #232323;
+  z-index: 1;
+}
+
+/* Slider Item Styles */
+.slider-item {
+  position: relative;
+}
+
+/* Image styles for the slider */
+.slider-image {
+  height: 600px; /* Default height */
+  background-size: cover;
+  border-radius: 10px;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text overlay on the slider */
+.slider-text {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 80%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .latest-updates-title {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .slider-image {
+    height: 400px; /* Adjust for smaller screens */
+  }
+
+  .slider-text {
+    font-size: 1rem;
+    padding: 15px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .latest-updates-title {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .slider-image {
+    height: 300px; /* Further adjust for very small screens */
+  }
+
+  .slider-text {
+    font-size: 0.9rem;
+    padding: 10px;
+    margin: 5px;
+    max-width: 95%;
+  }
+}
+
+/* Slick Slider Dots Styling */
+.slick-dots {
+  position: absolute;
+  bottom: 10px !important; /* Adjust this value to move dots up or down */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: auto; /* Width of the dots container */
+}
+
+.slick-dots li {
+  margin: 0 7px; /* Adjust spacing between dots */
+  position: relative;
+}
+
+.slick-dots li button {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent color for dots */
+  border-radius: 50%; /* Circular dots */
+  width: 7px; /* Size of dots */
+  height: 7px;
+  padding: 0;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+
+/* Active dot button style */
+.slick-dots .slick-active button {
+  background-color: #ffffff86; /* Color for active dot */
+  width: 7px; /* Size of the active dot */
+  height: 7px;
+  border-radius: 50%; /* Keep it circular */
+}
+
+/* Hide the inactive dot of the active slide */
+.slick-dots .slick-active button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Makes the dot itself invisible */
+  border-radius: 50%; /* Keep it circular */
+  z-index: -1; /* Place behind the active button */
+}
+
+/* Inactive dots remain visible */
+.slick-dots li:not(.slick-active) button {
+  opacity: 1; /* Ensure all inactive dots are visible */
+}

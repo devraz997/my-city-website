@@ -1,0 +1,104 @@
+/* Basic styling for the header component */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff1b9f0; /* Adjust to your theme */
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+  z-index: 10; /* Ensure header is on top of other content */
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(150deg, #0a3562, #d9534f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navigation styling */
+nav.menu {
+  display: flex;
+  align-items: center; /* Vertically center the navigation links */
+  margin-top: 0.5rem;
+}
+
+nav.menu a {
+  color: #0a3562;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1rem; /* Adjust font size as needed */
+  transition: color 0.3s ease;
+}
+
+nav.menu a:hover,
+nav.menu a:focus {
+  color: #d9534f; /* Color change on hover and focus */
+}
+
+/* Auth buttons styling */
+.auth-buttons a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #d9534f; /* Default color for auth buttons */
+  font-size: 1rem; /* Adjust font size as needed */
+  transition: color 0.3s ease;
+}
+
+.auth-buttons a:hover,
+.auth-buttons a:focus {
+  color: #0a3562; /* Color change on hover and focus */
+}
+
+/* Hide the menu by default on smaller screens */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .logo {
+    margin: 0 auto;
+  }
+
+  nav.menu {
+    display: none; /* Hide the menu by default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff1b9f0;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    z-index: 10; /* Ensure the nav is on top of other content */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to make it more distinct */
+  }
+
+  .menu-toggle {
+    display: block; /* Show toggle button on mobile */
+  }
+
+  nav.menu.open {
+    display: flex; /* Show menu when open */
+  }
+
+  nav.menu a {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+  }
+
+  .auth-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+}

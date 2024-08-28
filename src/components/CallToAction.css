@@ -1,0 +1,28 @@
+.cta {
+    text-align: center;
+    padding: 20px;
+    background: #fff1b999; /* Adjust background color if needed */
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cta-signup, .cta-login, .cta-create-poll {
+    background-color: #007BFF; /* Vibrant Blue for buttons */
+    border: none;
+    color: #C0C0C0; /* Silver for button text */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cta-signup:hover, .cta-login:hover, .cta-create-poll:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+}

@@ -1,0 +1,117 @@
+/* Section Styles */
+.featured-places {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff1b98e; /* Background color of the section */
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Title Styles */
+.featured-places h2 {
+    font-size: 2rem; /* Adjust font size for section title */
+    margin-bottom: 20px;
+}
+
+/* Carousel Styles */
+.places-carousel {
+    position: relative; /* For absolute positioning of slides */
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflowing content */
+    display: flex; /* Ensure slides are aligned horizontally */
+    align-items: center; /* Center slides vertically */
+}
+
+/* Slide Styles */
+.carousel-item {
+    flex: 0 0 100%;
+    transition: opacity 2000ms ease; /* Smooth transition for slides */
+    position: absolute; /* Ensure slides stack on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Hide slides initially */
+    visibility: hidden; /* Hide slides initially */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Active Slide Styles */
+.carousel-item.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Image Styles */
+.carousel-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the card area */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: brightness(50%) contrast(100%) grayscale(20%); /* Apply filter for readability */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Content Styles */
+.carousel-item-info {
+    position: absolute;
+    bottom: 20px; /* Position content at the bottom of the slide */
+    left: 20px; /* Position content from the left edge */
+    color: #fff; /* Text color */
+    padding: 10px;
+    max-width: 80%; /* Ensure text doesn't overflow */
+    z-index: 2;
+    text-align: left; /* Left-align text */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    box-sizing: border-box; /* Prevent content overflow */
+    border-radius: 5px; /* Optional: add border-radius to content box */
+}
+
+/* Title and Tagline Alignment */
+.carousel-item-info h3,
+.carousel-item-info p {
+    margin: 0;
+}
+
+/* Explore More Button Styles */
+.explore-more-btn {
+    background-color: #0a3562; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1rem; /* Button font size */
+}
+
+/* Hover Effect for Slides */
+.carousel-item:hover .carousel-item-image {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .places-carousel {
+        height: 300px; /* Adjust height for mobile view */
+    }
+
+    .carousel-item-info {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .carousel-item-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-item-info p {
+        font-size: 0.9rem;
+    }
+}

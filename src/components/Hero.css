@@ -1,0 +1,104 @@
+.hero {
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+  margin: 10px; /* Ensure no extra margin affecting layout */
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the hero section */
+  z-index: -1; /* Places the video behind the content */
+  filter: brightness(45%); /* Adjust brightness for better text visibility */
+  transform: translate(-50%, -50%); /* Centers the video */
+}
+
+.hero-content {
+  z-index: 1;
+  padding: 1rem;
+  position: relative; /* Ensures content is positioned above the video */
+  max-width: 90%; /* Prevents content from stretching too wide */
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 1rem;
+  animation: textFadeIn 3s ease-out forwards; /* Text animation */
+  line-height: 1.2; /* Better readability */
+  word-wrap: break-word; /* Ensures text wraps properly */
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  animation: textFadeIn 4s ease-out forwards; /* Text animation */
+}
+
+@keyframes textFadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.map-icon {
+  cursor: pointer;
+  display: inline-block;
+  animation: textFadeIn 5s ease-out forwards; /* Icon animation */
+}
+
+.map-icon p {
+  margin-top: 0.5rem;
+}
+
+.map-container {
+  margin-top: 20px;
+  animation: textFadeIn 6s ease-out forwards; /* Map animation */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 25vh; /* Allow height to adjust based on content */
+    padding: 2rem 1rem; /* Adjust padding for better spacing */
+  }
+
+  .hero-content {
+    padding: 2rem;
+    max-width: 100%; /* Allows content to use full width on smaller screens */
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    word-wrap: break-word; /* Ensures text wraps properly */
+    line-height: 1.2; /* Maintain readability */
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .map-icon {
+    margin-top: 0rem;
+  }
+}
+
+/* Additional styles for larger screens */
+@media (min-width: 769px) {
+  .hero {
+    height: 100vh; /* Ensures full viewport height on larger screens */
+  }
+  
+  .hero-video {
+    object-fit: cover; /* Ensures the video covers the hero section */
+  }
+}

@@ -1,0 +1,123 @@
+/* Food Places Section Styles */
+.food-places {
+    padding: 20px;
+    background-color: #fff1b98e; /* Background color of the section */
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .food-places h2 {
+    font-size: 2rem; /* Adjust font size for section title */
+    margin-bottom: 20px;
+  }
+  
+  /* Carousel Styles */
+  .places-carousel {
+    position: relative; /* For absolute positioning of slides */
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflowing content */
+    display: flex; /* Ensure slides are aligned horizontally */
+  }
+  
+  /* Slide Styles */
+  .place-card {
+    flex: 0 0 100%;
+    transition: opacity 2000ms ease; /* Smooth transition for slides */
+    position: absolute; /* Ensure slides stack on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Hide slides initially */
+    visibility: hidden; /* Hide slides initially */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Active Slide Styles */
+  .place-card.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Image Styles */
+  .place-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the card area */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: brightness(50%) contrast(100%) grayscale(20%); /* Apply filter for readability */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+  }
+  
+  /* Content Styles */
+  .place-card-content {
+    position: absolute;
+    bottom: 20px; /* Position content at the bottom of the slide */
+    left: 20px; /* Position content from the left edge */
+    color: #fff; /* Text color */
+    padding: 10px;
+    max-width: 80%; /* Ensure text doesn't overflow */
+    z-index: 2;
+    text-align: left; /* Left-align text */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    box-sizing: border-box; /* Prevent content overflow */
+    border-radius: 5px; /* Optional: add border-radius to content box */
+  }
+  
+  /* Title and Tagline Alignment */
+  .place-card-content h3,
+  .place-card-content p {
+    margin: 0;
+  }
+  
+  /* Explore More Button Styles */
+  .explore-more-btn {
+    display: block;
+    margin: 20px auto 0; /* Center horizontally and add margin at the top */
+    padding: 10px 20px; /* Add padding for better appearance */
+    background-color: #0a3562; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  .explore-more-btn:hover {
+    background-color: #d9534f; /* Change background color on hover */
+  }
+  
+  /* Hover Effect for Slides */
+  .place-card:hover .place-card-image {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .places-carousel {
+      height: 300px; /* Adjust height for mobile view */
+    }
+  
+    .place-card-content {
+      bottom: 10px;
+      left: 10px;
+    }
+  
+    .place-card-content h3 {
+      font-size: 1.2rem;
+    }
+  
+    .place-card-content p {
+      font-size: 0.9rem;
+    }
+  }
+  
